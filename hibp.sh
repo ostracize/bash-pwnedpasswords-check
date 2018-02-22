@@ -9,8 +9,8 @@ SUFFIX=`echo -n ${HASH} | cut -c6-99`
 RESULT=`curl -s -o - https://api.pwnedpasswords.com/range/${PREFIX} | grep -i ${SUFFIX}`
 
 if [ $? != 0  ]; then
-    echo "Password not found";
+    echo "Password not found"
 else
-    COUNT=`echo ${RESULT} | awk -F: '{print $2}'`;
+    COUNT=`echo ${RESULT} | awk -F: '{print $2}'`
     echo "Password count: ${COUNT}"
 fi;
