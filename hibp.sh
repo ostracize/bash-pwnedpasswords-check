@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# (H)ave (I) (B)een (P)wned?
+
 read -p "What password do you want to check? " PASS
 echo "Checking:" $PASS
 
